@@ -47,7 +47,7 @@ body>div{
     font-weight: 900px;
 }
 .content p{
-    font-size: 18px;
+    font-size: 1.125em;
     color: #e5e7eb;
 }
 .content ul{
@@ -97,5 +97,23 @@ body>div{
 }
 
 .info>ul>li>p{
-    font-size: 18px;
+    font-size: 1.125em;
+}
+
+/* Quote Class */
+blockquote {
+    font-size: 1.125em;
+    font-style: italic;
+    padding: 60px;
+    margin: 20px 0;
+    background-color: #e5e7eb;
+    border-left: 5px solid #1f2937;
+    border-radius: 5px;
+}
+
+blockquote footer {
+    margin-top: 10px;
+    text-align: right;
+    font-weight: bold;
+    font-style: normal;
 }
