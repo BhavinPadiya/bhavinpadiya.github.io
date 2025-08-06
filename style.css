@@ -23,8 +23,11 @@ body>div{
 .header> ul>li{
     flex: 1;
 }
-.header>strong{
+.header>a{
     padding: 10px;
+}
+.header>a>strong{
+    text-decoration: underline;
     font-size: 1.5em;
     color: #f9faf8;
 }
