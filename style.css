@@ -56,3 +56,45 @@ body>div{
     flex: 1;
     list-style: none;
 }
+
+/* INFO CLASS */
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.info ul{
+    flex: 1;
+    display: flex;
+}
+.info h3{
+    flex: 1;
+    font-size: 36px;
+    color:#1f2937;
+    font-weight: 900px;
+    text-align: center;
+}
+.info li{
+    list-style: none;
+    flex: 1;
+    justify-items: center;
+}
+.info>ul>li>div{
+    width: 200px;
+    height: 200px;
+    border: 2px solid #3882f6;
+    border-radius: 20px;
+}
+.info>ul>li>div:hover{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+.info>ul>li>div>h3{
+    padding: 20px;
+}
+.info>ul>li>div>h3>a{
+    text-decoration: none;
+    color:#1f2937;
+}
+
+.info>ul>li>p{
+    font-size: 18px;
+}
