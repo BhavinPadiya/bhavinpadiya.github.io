@@ -39,7 +39,6 @@ body>div{
 /* CONTENT CLASS */
 .content{
     background-color: #1f2937;
-    padding: 50px 0;
 }
 .content h1{
     font-size: 48px;
@@ -50,11 +49,11 @@ body>div{
     font-size: 1.125em;
     color: #e5e7eb;
 }
+
 .content ul{
-    display: flex;
+    padding: 0;
 }
 .content ul>*{
-    flex: 1;
     list-style: none;
 }
 
