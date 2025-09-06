@@ -1,150 +1,152 @@
+
+/* Overridden desktop-friendly styles - only style changes, no HTML edits */
+
+/* Center page and limit width for desktop */
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-body>div{
-    flex: 1;
-    padding: 0 20px;
+  font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 auto;
+  max-width: 1080px;
+  color: #111827;
+  background-color: #ffffff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-/* HEADER CLASS*/
+/* Ensure the outer wrapper has comfortable horizontal padding */
+body > div {
+  padding: 0 24px;
+}
+
+/* Header: horizontal nav, aligned and spacious */
 .header{
-    display: flex;
-    background-color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: transparent;
+  padding: 18px 0;
 }
-.header>ul{
-    display: flex;
-    gap: 2em;
-    list-style: none;
-    margin-left: auto;
+.header > a{
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-right: 10px;
 }
-.header> ul>li{
-    flex: 1;
+.header > ul{
+  margin-left: auto;
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  align-items: center;
 }
-.header>a{
-    padding: 10px;
-    text-decoration: underline;
-    font-size: 1.5em;
-    color: #f9faf8;
+.header > ul > li{
+  margin: 0;
+  flex: 0;
 }
-.header> ul> li> a{
-    text-decoration: none;
-    font-size: 1.125em;
-    color: #e5e7eb;
+.header > ul > li > a{
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.header > ul > li > a:hover{
+  background: rgba(59,130,246,0.08);
 }
 
-
-/* CONTENT CLASS */
+/* Main content area: use a light card style for sections */
 .content{
-    background-color: #1f2937;
-    display: flex;
-    flex-direction: column;
-}
-.content h1{
-    font-size: 48px;
-    color:#f9faf8;
-    font-weight: 900px;
-}
-.content p{
-    font-size: 1.125em;
-    color: #e5e7eb;
+  display: block;
+  background: transparent;
+  padding: 18px 0 48px 0;
 }
 
+/* Make lists look like cards / tiles on desktop */
 .content ul{
-    padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  padding: 0;
+  margin: 18px 0 32px;
 }
-.content ul>*{
-    list-style: none;
+.content ul > li{
+  list-style: none;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+}
+.content ul > li h3{
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  color: #0f172a;
+}
+.content ul > li p{
+  margin: 0;
+  color: #475569;
 }
 
+/* Make images inside content responsive and neat */
+.content img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
 
-/* INFO CLASS */
+/* Info section: keep vertical stack but nicer spacing */
 .info{
-    display: flex;
-    flex-direction: column;
+  display: block;
+  padding: 12px 0;
 }
-
-.info h3{
-    flex: 1;
-    font-size: 36px;
-    color:#1f2937;
-    font-weight: 900px;
-    text-align: center;
-    margin-bottom: -20px;
-}
-
 .info ul{
-    display: flex;
-    flex-direction: column;
+  display: block;
+  padding: 0;
+  margin: 0;
 }
-
 .info ul > *{
-    list-style: none;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
+  list-style: none;
+  margin-top: 16px;
 }
 
-.info>ul>li>div{
-    flex-wrap: wrap;
-    border: 2px solid #3882f6;
-    border-radius: 20px;
+/* Quote block: center and lighten */
+.quote{
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  padding: 28px 20px;
+  border-left: 4px solid rgba(59,130,246,0.9);
+  margin: 18px 0;
 }
-.info>ul>li>div:hover{
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-}
-.info>ul>li>div>h3{
-    padding: 20px;
-}
-.info>ul>li>div>h3>a{
-    text-decoration: none;
-    color:#1f2937;
+.quote blockquote{
+  margin: 0;
+  font-style: italic;
+  color: #0f172a;
+  font-size: 1.05rem;
 }
 
-.info>ul>li>p{
-    font-size: 1.125em;
-}
-
-/* Quote Class */
-blockquote {
-    font-size: 1.125em;
-    font-style: italic;
-    padding: 60px;
-    margin: 20px 0;
-    background-color: #e5e7eb;
-    border-left: 5px solid #1f2937;
-    border-radius: 5px;
-}
-
-blockquote footer {
-    margin-top: 10px;
-    text-align: right;
-    font-weight: bold;
-    font-style: normal;
-}
-
-/* Footer Class */
+/* Footer simplified */
 .footer{
-    background-color: #3882f6;
-    margin: 50px 100px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
+  background: transparent;
+  padding: 28px 0 60px 0;
 }
-.footer > *{
-    color: #f9faf8;
-    align-items: center;
+.footer > * {
+  color: #0f172a;
 }
-.footer>button{
-    margin: 20px 60px 20px 10px;
-    background-color: #3882f6;
-    border: 2px solid #f9faf8;
-    border-radius: 5px;
+.footer > button{
+  margin: 12px 6px;
+  background-color: #2563eb;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: white;
 }
-.footer>button>a{
-    text-decoration: none;
-    font-weight: bolder;
-    color: #f9faf8;
+
+/* Responsive tweaks */
+@media (max-width: 900px){
+  body { padding: 0 12px; max-width: 100%; }
+  .content ul{ grid-template-columns: 1fr; }
+  .header{ padding: 12px 0; }
+  .header > a{ font-size: 1.1rem; }
+  .header > ul{ gap: 12px; }
+  .content h1{ font-size: 1.6rem; }
 }
